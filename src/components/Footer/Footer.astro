@@ -1,0 +1,53 @@
+---
+import FooterAlternateLink from "./FooterAlternateLink.astro";
+import FooterSocialMedia from "./FooterSocialMedia.astro";
+---
+
+<footer id="footer" class="bg-dark pt-8 md:pt-16 pb-8 font-poppins">
+  <div class="container">
+    <div class="flex flex-wrap">
+      <div class="px-4 mb-8 text-slate-300 text-sm md:w-1/3 mr-16">
+        <h2 class="font-bold text-3xl mb-5 font-jaro text-primary">
+          <a href="./index.html#hero">Amin Gypsum</a>
+        </h2>
+        <h3 class="font-bold text-xl mb-2">Layanan & Kerjasama</h3>
+        <p>amingypsum@gmail.com</p>
+        <p>Jl. Diponegoro, Tersono, Kec. Tersono, Kabupaten Batang</p>
+        <p>Jawa Tengah 51272</p>
+      </div>
+      <div class="px-4 mb-12 text-sm md:w-1/3">
+        <h3 class="font-semibold text-xl text-white mb-5">Alternatif Tautan</h3>
+        <ul class="text-slate-300">
+          <li>
+            <FooterAlternateLink href="/">Beranda</FooterAlternateLink>
+          </li>
+          <li>
+            <FooterAlternateLink href="/products">Produk</FooterAlternateLink>
+          </li>
+          <li>
+            <FooterAlternateLink href="/projects">Proyek</FooterAlternateLink>
+          </li>
+          <li>
+            <FooterAlternateLink href="/services">Layanan</FooterAlternateLink>
+          </li>
+          <li>
+            <FooterAlternateLink href="/contact-us"
+              >Hubungi Kami</FooterAlternateLink
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-slate-700">
+      <FooterSocialMedia />
+      <p class="font-medium text-xxs text-slate-500 text-center">
+        Copyright © 2024
+        <a
+          href="https://github.com/JackBerck/purbalingga-exhaust-store"
+          class="font-bold text-primary"
+          target="_blank">Amin Gypsum</a
+        >. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

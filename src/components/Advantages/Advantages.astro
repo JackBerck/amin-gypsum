@@ -1,0 +1,84 @@
+---
+const info = [
+  {
+    image: "./public/img/services/advantage/smile.png",
+    alt: "Smile",
+    total: 143,
+    desc: "Pelanggan Puas",
+  },
+  {
+    image: "./public/img/services/advantage/project.png",
+    alt: "Project",
+    total: 150,
+    desc: "Proyek terselesaikan",
+  },
+  {
+    image: "./public/img/services/advantage/product.png",
+    alt: "Product",
+    total: 1583,
+    desc: "Produk terjual",
+  },
+];
+---
+
+<section id="advantage" class="pt-10 pb-4 bg-slate-100 font-poppins">
+  <div class="container">
+    <div class="w-full px-4">
+      <div class="max-w-xl mb-6 m-auto text-center">
+        <h4 class="font-semibold text-primary mb-2 text-md">
+          Berkualitas, Terjangkau, dan Terpercaya
+        </h4>
+        <h2 class="font-bold text-dark text-lg mb-4 m:text-xl lg:text-2xl">
+          Dekorasi Rumah Anda Bersama Amin Gypsum
+        </h2>
+        <p class="font-medium text-sm text-secondary md:text-md">
+          Dengan memilih Amin Gypsum, Anda tidak hanya mendapatkan produk
+          dekorasi, tetapi juga pengalaman yang menyenangkan dan memuaskan dalam
+          mempercantik rumah Anda.
+        </p>
+      </div>
+      <div class="max-w-full px-4 flex flex-wrap justify-center text-center">
+        {
+          info.map((data) => (
+            <div class="mb-12 p-4 md:w-1/3 lg:w-1/4">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <img src={data.image} alt={data.alt} class="mx-auto" />
+                <h2
+                  class="title-font font-medium text-3xl text-dark purecounter"
+                  data-purecounter-start="0"
+                  data-purecounter-end={data.total}
+                  data-purecounter-duration="1"
+                >
+                  {data.total}
+                </h2>
+                <p class="leading-relaxed">{data.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import PureCounter from "@srexi/purecounterjs";
+  new PureCounter({
+    // Setting that can't' be overriden on pre-element
+    selector: ".purecounter", // HTML query selector for spesific element
+
+    // Settings that can be overridden on per-element basis, by `data-purecounter-*` attributes:
+    start: 0, // Starting number [uint]
+    end: 100, // End number [uint]
+    duration: 4, // The time in seconds for the animation to complete [seconds]
+    delay: 10, // The delay between each iteration (the default of 10 will produce 100 fps) [miliseconds]
+    once: true, // Counting at once or recount when the element in view [boolean]
+    pulse: false, // Repeat count for certain time [boolean:false|seconds]
+    decimals: 0, // How many decimal places to show. [uint]
+    legacy: true, // If this is true it will use the scroll event listener on browsers
+    filesizing: false, // This will enable/disable File Size format [boolean]
+    currency: false, // This will enable/disable Currency format. Use it for set the symbol too [boolean|char|string]
+    formater: "us-US", // Number toLocaleString locale/formater, by default is "en-US" [string|boolean:false]
+    separator: false, // This will enable/disable comma separator for thousands. Use it for set the symbol too [boolean|char|string]
+  });
+</script>
