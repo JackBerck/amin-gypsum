@@ -1,23 +1,23 @@
 ---
 const info = [
   {
-    title: "Peace Lily",
-    img: "https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png",
-    category: "Indoor",
+    title: "Lis gypsum korbel",
+    img: "/img/products/gypsum-1.jpg",
+    category: "Lis gypsum",
     price: "12.000",
     color: "orange-500",
   },
   {
-    title: "Monstera",
-    img: "https://user-images.githubusercontent.com/2805249/64069998-305de300-cc9a-11e9-8ae7-5a0fe00299f2.png",
-    category: "Outdoor",
+    title: "Ornamen bintang",
+    img: "/img/products/gypsum-1.jpg",
+    category: "Hiasan plafon",
     price: "12.000",
     color: "teal-500",
   },
   {
-    title: "Oak Tree",
-    img: "https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png",
-    category: "Outdoor",
+    title: "Wall moulding",
+    img: "/img/products/gypsum-3.jpg",
+    category: "Lis biding",
     price: "12.000",
     color: "purple-500",
   },
@@ -29,14 +29,13 @@ const info = [
     <div class="w-full px-4 md:px-8 lg:px-16">
       <div class="max-w-xl mb-6 m-auto text-center">
         <h4 class="font-semibold text-primary mb-2 text-md">
-          Mudah, Cepat, dan Aman
+          Kuat, Cepat, dan Tepat
         </h4>
         <h2 class="font-bold text-dark text-lg mb-4 m:text-xl lg:text-2xl">
-          Bersama Purbalingga Exhaust Store
+          Bersama Amin Gypsum
         </h2>
         <p class="font-medium text-sm text-slate-400 md:text-md">
-          Belanja mudah, cepat, dan aman dengan banyak toko resmi dan produk
-          terpopuler yang berstandar SNI.
+          Belanja gypsum yang kuat dengan layanan cepat dan produk yang tepat.
         </p>
       </div>
       <div class="flex flex-wrap items-center justify-center">
@@ -80,18 +79,13 @@ const info = [
                 />
                 <img class="relative w-40" src={data.img} alt={data.title} />
               </div>
-              <div class="relative  px-6 pb-6 mt-6">
+              <div class="relative  px-6 pb-6 mt-6  capitalize">
                 <span class="block opacity-75 -mb-1 text-white">
                   {data.category}
                 </span>
                 <div class="flex justify-between ">
                   <span class="block font-semibold text-xl text-white">
                     {data.title}
-                  </span>
-                  <span
-                    class={`bg-white rounded-full text-dark text-xs font-bold px-3 py-2 leading-none flex items-center`}
-                  >
-                    Rp{data.price}
                   </span>
                 </div>
               </div>

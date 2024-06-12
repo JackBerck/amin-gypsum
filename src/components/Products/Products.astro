@@ -1,54 +1,64 @@
 ---
 const info = [
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Lis gypsum minimalis",
+    category: "Lis gypsum",
     img: "img/products/gypsum-1.jpg",
-    price: "12.000",
+    price: "12.500",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Lis gypsum korbel",
+    category: "Lis gypsum",
     img: "img/products/gypsum-2.jpg",
-    price: "12.000",
+    price: "23.000",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Lis gypsum bunga",
+    category: "Lis gypsum",
     img: "img/products/gypsum-3.jpg",
-    price: "12.000",
+    price: "26.000",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Lis gypsum kiki",
+    category: "Lis gypsum",
     img: "img/products/gypsum-4.jpg",
-    price: "12.000",
+    price: "12.500",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Lis gypsum sawi",
+    category: "Lis gypsum",
     img: "img/products/gypsum-5.jpg",
-    price: "12.000",
+    price: "27.000",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Lis plafon kiki",
+    category: "Lis gypsum",
     img: "img/products/gypsum-6.jpg",
-    price: "12.000",
+    price: "17.000",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Oranamen bintang",
+    category: "Hiasan plafon",
     img: "img/products/gypsum-7.jpg",
-    price: "12.000",
+    price: "750.000",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Ornamen dinding",
+    category: "Ornamen panel",
     img: "img/products/gypsum-8.jpg",
-    price: "12.000",
+    price: "60.000",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Ornamen motif api",
+    category: "Hiasan plafon",
     img: "img/products/gypsum-9.jpg",
-    price: "12.000",
+    price: "30.000",
   },
   {
-    title: "Lorem ipsum dolor sit amete alek sko yut sushieno",
+    title: "Lis wall moulding",
+    category: "Lis biding",
     img: "img/products/gypsum-10.jpg",
-    price: "12.000",
+    price: "12.500",
   },
 ];
 ---
@@ -60,14 +70,11 @@ const info = [
     >
       <div class="max-w-xl">
         <h4 class="font-semibold text-primary mb-2 text-md">
-          Gass Njajan gypsum- 🤑
+          Selamat Berbelanja Gypsum
         </h4>
         <h2 class="font-bold text-dark text-lg md:text-2xl mb-4">
-          Temukan beragam produk terpopuler di Purbalingga Exhaust Store
+          Temukan beragam produk terpopuler di Amin Gypsum
         </h2>
-      </div>
-      <div class="text-sm">
-        <a href="#" class="hover:text-primary">Lihat selengkapnya →</a>
       </div>
     </div>
     <div class="flex flex-wrap justify-center">
@@ -78,9 +85,9 @@ const info = [
               <div class="bg-white rounded-xl overflow-hidden shadow-md mb-10 px-2">
                 <img src={data.img} alt={data.title} class="w-full" />
                 <div class="py-4 px-1 flex flex-col">
-                  {/* <p class="text-blue-400 text-xs mb-1 font-bold">
-                    Produk terlaris
-                  </p> */}
+                  <p class="text-blue-400 text-xs mb-1 font-bold">
+                    {data.category}
+                  </p>
                   <p class="block mb-3 line-clamp-2-fix text-dark text-xs md:text-sm hover:text-secondary transition duration-100">
                     {data.title}
                   </p>

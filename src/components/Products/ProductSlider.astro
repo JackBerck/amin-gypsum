@@ -1,0 +1,114 @@
+---
+const logos = [
+  {
+    title: "Selamat Datang di Amin Gypsum",
+    img: "/img/product-slider/selamat-datang.png",
+  },
+  {
+    title: "Modern Interior Amin Gypsum",
+    img: "/img/product-slider/modern-interior.png",
+  },
+  {
+    title: "Selamat Menunaikan Ibadah Puasa dari Amin Gypsum",
+    img: "/img/product-slider/ibadah-puasa.png",
+  },
+];
+---
+
+<div class="swiper logo-swiper pt-20">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    {
+      logos.map((logo, index) => (
+        <div class="swiper-slide w-full">
+          <img src={logo.img} alt={logo.title} />
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<style>
+  .swipper {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .swiper-slide {
+    position: relative;
+    border-radius: 14px;
+    border: 1px solid rgba(177, 177, 177, 0.8);
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    user-select: none;
+  }
+</style>
+
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  const logos = [
+    {
+      title: "Teman Pintar di Dunia Digital",
+      desc: "Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan Gemini, model bahasa besar dari Google.",
+      img: "./images/cartoon/1.jpg",
+    },
+    {
+      title: "Buka Pintu Pengetahuan dengan Gemini",
+      desc: "Jelajahi dunia baru dengan Gemini, model bahasa yang siap menjawab pertanyaan Anda dan membantu menyelesaikan berbagai tugas.",
+      img: "./images/cartoon/2.jpg",
+    },
+    {
+      title: "Pemandu Cerdas di Ujung Jari Anda",
+      desc: "Akses informasi dan wawasan luas, dapatkan jawaban informatif, dan ciptakan berbagai format teks kreatif dengan Gemini.",
+      img: "./images/cartoon/3.jpg",
+    },
+    {
+      title: "Rasakan Kekuatan Bahasa dengan Gemini",
+      desc: "Gemini, model bahasa besar dari Google, siap membantu Anda menjelajahi dunia digital dengan penuh informasi dan kreativitas.",
+      img: "./images/cartoon/4.jpg",
+    },
+    {
+      title: "Masa Depan Pencarian dan Kreativitas",
+      desc: "Temukan jawaban, ciptakan konten, dan pelajari hal baru dengan Gemini, model bahasa yang terus berkembang dan belajar.",
+      img: "./images/cartoon/5.jpg",
+    },
+  ];
+
+  let logoSwiper = new Swiper(".logo-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 0,
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    preventClicks: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 80,
+      depth: 350,
+      modifier: 1,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+    on: {
+      click(event) {
+        logoSwiper.slideTo(this.clickedIndex);
+      },
+    },
+  });
+</script>
